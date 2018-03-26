@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TimelineMax.min.js"></script>
+
+  <script src="js/anime.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800" rel="stylesheet">
+  <link href="css/video.popup.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <title>IWKZ Tutorium</title>
+</head>
+
+<body>
+  <div id="section-home" class="container-fluid section-1">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light  fixed-top" data-spy="affix">
+      <a class="navbar-brand" href="https://iwkz.de">
+        <img src="img/iwkz_brand.png" width="30" height="30" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown" >
+        <ul class="navbar-nav" >
+          <li class="nav-item active">
+            <a class="nav-link" href="#section-home">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-anp">ANP Vorbereitung</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-fsp">FSP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-sprechstunde">Sprechstunde</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-youtube">Online Content</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section-studienberatung">Studienberatung</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mehr
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Über Uns</a>
+              <a class="dropdown-item" href="#">Galerie</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 781.5 417.6">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #aeff50;
+      }
+
+      .cls-2 {
+        fill: #fabe58;
+        stroke: #fabe58;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4, .cls-6, .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-3 {
+        fill: #ea6edb;
+        stroke: #ea6edb;
+        stroke-width: 1.1px;
+      }
+
+      .cls-4 {
+        fill: #7878ff;
+        stroke: #7878ff;
+      }
+
+      .cls-5 {
+        fill: #28d188;
+        stroke: #28d188;
+        stroke-width: 4px;
+      }
+
+      .cls-6 {
+        fill: #48beff;
+        stroke: #48beff;
+      }
+
+      .cls-7 {
+        fill: #d64541;
+        stroke: #d64541;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="50.2 290.5 55.3 270.7 45.4 268.2 40.3 287.9 20.6 282.8 18 292.7 37.8 297.8 32.7 317.6 42.6 320.1 47.7 300.3 67.4 305.4 70 295.6 50.2 290.5"/>
+  <path class="cls-2" d="M590.4,510.6c-1.2-4.5-4.6-6.5-7.8-8.3s-4.1-2.5-4.7-4.6.6-4.4,3.1-6.3a10.1,10.1,0,0,0,0-5.6c-1.9-6.9-8.1-9.2-14.1-7.6a13.7,13.7,0,0,0-8.4,5.8c-2.1,3.3-2.7,7.8-.7,15l7.8,28.5,5.5-1.5-7.9-28.7c-2.5-9-.7-13.1,4.2-14.4s7.2.7,8.4,5.1a7.2,7.2,0,0,1,.2,2.9c-3.1,2.7-4.4,6.1-3.5,9.3s3.9,5.2,7.2,7,4.5,2.9,5.2,5.6-.7,5.9-4.7,7a12.1,12.1,0,0,1-5.6.2v4.5a15.8,15.8,0,0,0,7-.5C588.9,521.8,592,516.6,590.4,510.6Z" transform="translate(-110.7 -351.1)"/>
+  <g>
+    <path class="cls-3" d="M137.1,377.5a3.5,3.5,0,0,0,4.9-1.1,3.5,3.5,0,0,0-.9-5,3.6,3.6,0,0,0-5,1A3.6,3.6,0,0,0,137.1,377.5Z" transform="translate(-110.7 -361.1)"/>
+    <path class="cls-3" d="M152.1,378.7a3.6,3.6,0,0,0-5,1.1,3.5,3.5,0,1,0,5.9,3.9A3.5,3.5,0,0,0,152.1,378.7Z" transform="translate(-110.7 -361.1)"/>
+    <path class="cls-3" d="M138.9,385.1a21.4,21.4,0,0,0-11.1-3.7l-1.1,4.2a17.2,17.2,0,0,1,8.9,2.8c5.9,3.9,3.7,8.6,2.1,11l-.4.6c-11.1-7.4-19.7-7.7-24.3-.8-2.8,4.2-2.5,10.2,3.3,14.1a12.8,12.8,0,0,0,11.6,1.6h.2l-2,3.9,4.7,3.1a48.6,48.6,0,0,1,4.1-7.2l7.1-10.7C145.8,398.3,147.6,390.9,138.9,385.1Zm-7.2,23.6a6.6,6.6,0,0,1-1.4,1.5,8.6,8.6,0,0,1-10.1.2c-2.7-1.8-3.9-4.9-1.6-8.2,3.7-5.6,10.8-2.3,16.4,1.6Z" transform="translate(-110.7 -361.1)"/>
+  </g>
+  <g>
+    <path class="cls-4" d="M519.3,729.5a3.8,3.8,0,0,0,4.7-2.5,3.7,3.7,0,0,0-2.4-4.8,3.9,3.9,0,0,0-4.9,2.5A3.8,3.8,0,0,0,519.3,729.5Z" transform="translate(-110.7 -361.1)"/>
+    <path class="cls-4" d="M532.6,733.7a3.8,3.8,0,0,0,4.7-2.5,3.7,3.7,0,0,0-2.4-4.8,3.8,3.8,0,0,0-4.8,2.5A3.8,3.8,0,0,0,532.6,733.7Z" transform="translate(-110.7 -361.1)"/>
+    <path class="cls-4" d="M532,740.4l-6.9,21.4a9.8,9.8,0,0,1-1.6,3.1,9.6,9.6,0,0,1-10.2,3.1c-5.8-1.9-6.4-7-4.2-13.6l6.2-19.3-6.3-2-6.6,20.4c-3.9,12.3,1.6,17.4,7.1,19.2a13.8,13.8,0,0,0,13.6-2.8h.1l-1.5,5.8,5.6,1.8c.7-2.8,1.6-6,2.8-9.6l8.2-25.4Z" transform="translate(-110.7 -361.1)"/>
+  </g>
+  <path class="cls-5" d="M853.3,367.5a11.3,11.3,0,0,0-2.3.5,4.4,4.4,0,0,0-2.8,2.8c-.8,2.4-.4,5.9,1.9,12.5,3.8,10.7,9.2,23.3,13.1,34.5,2.5,7.3,2.7,12,1.8,15a8.8,8.8,0,0,1-5.8,6,10.6,10.6,0,0,1-4.2.7l-.6-4.6a8.3,8.3,0,0,0,2.8-.5,4.3,4.3,0,0,0,2.7-2.7c.7-2,.8-5.1-1.7-12.2-3.9-11.2-9.4-24.1-13.2-35-2.6-7.5-2.9-12.1-1.2-15.9a9.1,9.1,0,0,1,5.6-5.1,10.1,10.1,0,0,1,3.5-.6Z" transform="translate(-110.7 -361.1)"/>
+  <path class="cls-6" d="M861.6,701c-3.4,5.9-6.9,12.3-14.3,14.2s-14.6-2.2-16.7-10.1A14.1,14.1,0,0,1,840.9,688c6.8-1.8,13.2,2.3,18.7,5.5,3.4-5.9,6.9-12.3,14.3-14.2s14.6,2.2,16.7,10.1a14.1,14.1,0,0,1-10.3,17.2C873.6,708.3,867.2,704.2,861.6,701Zm-4.6-2.8c-4.4-2.4-9.4-6.1-14.7-4.7a8.3,8.3,0,0,0-5.9,10.1c1.2,4.7,5.4,7.2,9.9,6S854.5,702.7,857,698.2Zm27.9-7.3c-1.2-4.7-5.4-7.2-9.9-6s-8.2,6.9-10.8,11.4c4.4,2.4,9.4,6.1,14.7,4.7A8.3,8.3,0,0,0,884.9,690.9Z" transform="translate(-110.7 -361.1)"/>
+  <polygon class="cls-7" points="275.5 42.5 275.5 42.3 290.3 24.5 276.2 6.8 276.2 6.5 299.4 6.5 299.4 1.6 268.6 1.6 268.6 5.6 283.7 24.7 267.7 43.9 267.7 47.5 301.6 47.5 301.6 42.5 275.5 42.5"/>
+</svg>
+
+<svg id="Layer_1" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 781.5 417.6">
+<defs>
+<style>
+  .cls-1 {
+    fill: #aeff50;
+  }
+
+  .cls-2 {
+    fill: #fabe58;
+    stroke: #fabe58;
+  }
+
+  .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+    stroke-miterlimit: 10;
+  }
+
+  .cls-2, .cls-4, .cls-6, .cls-7 {
+    stroke-width: 2px;
+  }
+
+  .cls-3 {
+    fill: #ea6edb;
+    stroke: #ea6edb;
+    stroke-width: 1.1px;
+  }
+
+  .cls-4 {
+    fill: #7878ff;
+    stroke: #7878ff;
+  }
+
+  .cls-5 {
+    fill: #28d188;
+    stroke: #28d188;
+    stroke-width: 4px;
+  }
+
+  .cls-6 {
+    fill: #48beff;
+    stroke: #48beff;
+  }
+
+  .cls-7 {
+    fill: #d64541;
+    stroke: #d64541;
+  }
+</style>
+</defs>
+<polygon class="cls-1" points="50.2 290.5 55.3 270.7 45.4 268.2 40.3 287.9 20.6 282.8 18 292.7 37.8 297.8 32.7 317.6 42.6 320.1 47.7 300.3 67.4 305.4 70 295.6 50.2 290.5"/>
+<path class="cls-2" d="M590.4,510.6c-1.2-4.5-4.6-6.5-7.8-8.3s-4.1-2.5-4.7-4.6.6-4.4,3.1-6.3a10.1,10.1,0,0,0,0-5.6c-1.9-6.9-8.1-9.2-14.1-7.6a13.7,13.7,0,0,0-8.4,5.8c-2.1,3.3-2.7,7.8-.7,15l7.8,28.5,5.5-1.5-7.9-28.7c-2.5-9-.7-13.1,4.2-14.4s7.2.7,8.4,5.1a7.2,7.2,0,0,1,.2,2.9c-3.1,2.7-4.4,6.1-3.5,9.3s3.9,5.2,7.2,7,4.5,2.9,5.2,5.6-.7,5.9-4.7,7a12.1,12.1,0,0,1-5.6.2v4.5a15.8,15.8,0,0,0,7-.5C588.9,521.8,592,516.6,590.4,510.6Z" transform="translate(-110.7 -361.1)"/>
+<g>
+<path class="cls-3" d="M137.1,377.5a3.5,3.5,0,0,0,4.9-1.1,3.5,3.5,0,0,0-.9-5,3.6,3.6,0,0,0-5,1A3.6,3.6,0,0,0,137.1,377.5Z" transform="translate(-110.7 -361.1)"/>
+<path class="cls-3" d="M152.1,378.7a3.6,3.6,0,0,0-5,1.1,3.5,3.5,0,1,0,5.9,3.9A3.5,3.5,0,0,0,152.1,378.7Z" transform="translate(-110.7 -361.1)"/>
+<path class="cls-3" d="M138.9,385.1a21.4,21.4,0,0,0-11.1-3.7l-1.1,4.2a17.2,17.2,0,0,1,8.9,2.8c5.9,3.9,3.7,8.6,2.1,11l-.4.6c-11.1-7.4-19.7-7.7-24.3-.8-2.8,4.2-2.5,10.2,3.3,14.1a12.8,12.8,0,0,0,11.6,1.6h.2l-2,3.9,4.7,3.1a48.6,48.6,0,0,1,4.1-7.2l7.1-10.7C145.8,398.3,147.6,390.9,138.9,385.1Zm-7.2,23.6a6.6,6.6,0,0,1-1.4,1.5,8.6,8.6,0,0,1-10.1.2c-2.7-1.8-3.9-4.9-1.6-8.2,3.7-5.6,10.8-2.3,16.4,1.6Z" transform="translate(-110.7 -361.1)"/>
+</g>
+<g>
+<path class="cls-4" d="M519.3,729.5a3.8,3.8,0,0,0,4.7-2.5,3.7,3.7,0,0,0-2.4-4.8,3.9,3.9,0,0,0-4.9,2.5A3.8,3.8,0,0,0,519.3,729.5Z" transform="translate(-110.7 -361.1)"/>
+<path class="cls-4" d="M532.6,733.7a3.8,3.8,0,0,0,4.7-2.5,3.7,3.7,0,0,0-2.4-4.8,3.8,3.8,0,0,0-4.8,2.5A3.8,3.8,0,0,0,532.6,733.7Z" transform="translate(-110.7 -361.1)"/>
+<path class="cls-4" d="M532,740.4l-6.9,21.4a9.8,9.8,0,0,1-1.6,3.1,9.6,9.6,0,0,1-10.2,3.1c-5.8-1.9-6.4-7-4.2-13.6l6.2-19.3-6.3-2-6.6,20.4c-3.9,12.3,1.6,17.4,7.1,19.2a13.8,13.8,0,0,0,13.6-2.8h.1l-1.5,5.8,5.6,1.8c.7-2.8,1.6-6,2.8-9.6l8.2-25.4Z" transform="translate(-110.7 -361.1)"/>
+</g>
+<path class="cls-5" d="M853.3,367.5a11.3,11.3,0,0,0-2.3.5,4.4,4.4,0,0,0-2.8,2.8c-.8,2.4-.4,5.9,1.9,12.5,3.8,10.7,9.2,23.3,13.1,34.5,2.5,7.3,2.7,12,1.8,15a8.8,8.8,0,0,1-5.8,6,10.6,10.6,0,0,1-4.2.7l-.6-4.6a8.3,8.3,0,0,0,2.8-.5,4.3,4.3,0,0,0,2.7-2.7c.7-2,.8-5.1-1.7-12.2-3.9-11.2-9.4-24.1-13.2-35-2.6-7.5-2.9-12.1-1.2-15.9a9.1,9.1,0,0,1,5.6-5.1,10.1,10.1,0,0,1,3.5-.6Z" transform="translate(-110.7 -361.1)"/>
+<path class="cls-6" d="M861.6,701c-3.4,5.9-6.9,12.3-14.3,14.2s-14.6-2.2-16.7-10.1A14.1,14.1,0,0,1,840.9,688c6.8-1.8,13.2,2.3,18.7,5.5,3.4-5.9,6.9-12.3,14.3-14.2s14.6,2.2,16.7,10.1a14.1,14.1,0,0,1-10.3,17.2C873.6,708.3,867.2,704.2,861.6,701Zm-4.6-2.8c-4.4-2.4-9.4-6.1-14.7-4.7a8.3,8.3,0,0,0-5.9,10.1c1.2,4.7,5.4,7.2,9.9,6S854.5,702.7,857,698.2Zm27.9-7.3c-1.2-4.7-5.4-7.2-9.9-6s-8.2,6.9-10.8,11.4c4.4,2.4,9.4,6.1,14.7,4.7A8.3,8.3,0,0,0,884.9,690.9Z" transform="translate(-110.7 -361.1)"/>
+<polygon class="cls-7" points="275.5 42.5 275.5 42.3 290.3 24.5 276.2 6.8 276.2 6.5 299.4 6.5 299.4 1.6 268.6 1.6 268.6 5.6 283.7 24.7 267.7 43.9 267.7 47.5 301.6 47.5 301.6 42.5 275.5 42.5"/>
+</svg>
+
+
+
+<!-- The Modal
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe class="iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScHgV0p-evQhN6ugR4fdkhBpc3BEjflAo6s2XvuUYdfZvFTKg/viewform" frameborder="0"></iframe>
+  </div>
+
+</div>
+MODAL END -->
+
+<!-- Button trigger modal -->
+
+
+
+    <div class="row rows">
+      <div class="col-7">
+        <h1 class="big-h1"></h1>
+      </div>
+      <div class="col-5"></div>
+    </div>
+  </div>
+  <div class="container-fluid">
+
+
+
+    <div id="section-anp" class="row" style="min-height: 800px;">
+      <div class="col-md-5 left-1" >
+        <div class="col-text-1">
+          <h1 class="big-h1-menu">01<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">ANP Vorbereitung</h1>
+          <h5>Kelas Tatap Muka Rutin</h5>
+        </div>
+      </div>
+      <div class="col-md-7" >
+        <h3 class="text">Merupakan kelas rutin yang diadakan di IWKZ e.V setiap sore hari senin sampai jum’at. Pengajarnya?? Tenang, para tutor IWKZ Tutorium insyaa Allah sudah terbiasa mengajar dan tentu saja kelasnya santai, penuh humor tapi tetap selalu pulang membawa
+          ilmu.</h3>
+
+          <br />
+
+          <h4>Jadwal Kelas</h4>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Waktu</th>
+                  <th scope="col">Senin</th>
+                  <th scope="col">Selasa</th>
+                  <th scope="col">Rabu</th>
+                  <th scope="col">Kamis</th>
+                  <th scope="col">Jumat</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">16.30*</th>
+                  <td>Deutsch</td>
+                  <td>Mathe</td>
+                  <td>Mathe</td>
+                  <td>Deutsch</td>
+                  <td>Deutsch</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>* Waktu dapat berubah-ubah sesuai kondisi</p>
+          <br />
+          <h4>Pendaftaran</h4>
+          <p>Daftarkan dirimu sekarang juga!</p>
+          <a class="btn btn-primary" href="https://goo.gl/forms/zBArSoK6o70CnQVt2" role="button" style="margin-bottom: 15px">Daftar Sekarang</a>
+          <p>Ada pertanyaan lebih lanjut? Silakan kirim pesan <a href="mailto:iwkztutorium@gmail.com">di sini</a>!</p>
+
+
+      </div>
+    </div>
+
+    <div class="row flex-row-reverse row-low">
+
+      <div class="col-md-5 right-1">
+        <div class="col-text-1-right">
+          <h1 class="big-h1-menu">01<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">ANP Vorbereitung</h1>
+          <h5>Tutorial via skype</h5>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+          <h3 class="text">Tidak terhalang ruang dan waktu, kita juga menyediakan kelas online via skype 1x seminggu. Jadi teman teman dari luar kota berlin bahkan yang masih di indonesia bisa daftar kelas ini.</h3>
+          <br />
+          <p>Yuk gabung di kelas skype kita!</p>
+          <button id="openBtn" type="button" class="btn btn-primary" style="margin-bottom: 15px;">Join skype</button>
+          <p>Ada pertanyaan lebih lanjut? Silakan kirim pesan <a href="mailto:iwkztutorium@gmail.com">di sini</a>!</p>
+          <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog">
+          	<div class="modal-header">
+          		<button type="button" class="close" data-dismiss="modal">×</button>
+          			<h3>Dialog</h3>
+          	</div>
+          	<div class="modal-body">
+                <iframe src="" style="zoom:0.60" width="99.6%" height="400" frameborder="0"></iframe>
+          	</div>
+          	<div class="modal-footer">
+          		<button class="btn" data-dismiss="modal">OK</button>
+          	</div>
+          </div>
+
+<!-- Modal -->
+
+      </div>
+
+    </div>
+
+    <div class="row row-low">
+      <div class="col-md-5 left-2">
+        <div class="col-text-1">
+          <h1 class="big-h1-menu">01<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">ANP Vorbereitung</h1>
+          <h5>Deutsch: 1 Textproduktion pro Woche</h5>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h3 class="text">Apa tujuan dari progam ini?</h3>
+
+          <br />
+
+          <ul>
+            <li><i class="fas fa-check" style="color:#21CF8F"></i>&nbsp; Melatih menulis TP 1 kali per minggu</li>
+            <li><i class="fas fa-check" style="color:#21CF8F"></i>&nbsp; 1 penulis 1 pengoreksi</li>
+            <li><i class="fas fa-check" style="color:#21CF8F"></i>&nbsp; Membiasakan mencurahkan Idee ke dalam TP</li>
+            <li><i class="fas fa-check" style="color:#21CF8F"></i>&nbsp; Memperluas kosakata dan memperbaiki Grammatik</li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="row flex-row-reverse row-low">
+
+      <div class="col-md-5 right-2">
+        <div class="col-text-1-right">
+          <h1 class="big-h1-menu">01<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">ANP Vorbereitung</h1>
+          <h5>TOP AP se - Jerman</h5>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+          <h3 class="text">Sebelum kelas ANP Vorbereitung berakhir kita akan mengadakan ujian simulasi
+Aufnahmeprüfung untuk menguji sekaligus memberikan kesan suasana ujian
+yang sebenarnya. Uniknya, ujian simulasi ini dilakukan serentak di berbagai kota
+di Jerman.</h3>
+          <br />
+          <p>Test persiapan ANPmu!</p>
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScHgV0p-evQhN6ugR4fdkhBpc3BEjflAo6s2XvuUYdfZvFTKg/viewform" role="button" style="margin-bottom: 15px;">Melde dich an!</a>
+          <p>Ada pertanyaan lebih lanjut? Silakan kirim pesan <a href="mailto:iwkztutorium@gmail.com">di sini</a>!</p>
+      </div>
+    </div>
+
+    <div id="section-fsp" class="row row-low">
+      <div class="col-md-5 left-3">
+        <div class="col-text-1">
+          <h1 class="big-h1-menu">02<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">Festelungsprüfung</h1>
+          <h5>FSP Vorbereitung</h5>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h3 class="text">Kelas ini biasanya diadakan 1 sampai 2 bulan sebelum FSP dan membahas materi
+yang menjadi kesulitan teman teman Studienkolleg. Dengan beberapa arsip soal
+soal FSP terdahulu dan soal Latihan yang kami kumpulkan, diharapkan bisa
+membantu teman teman Studkol untuk lulus FSP dengan nilai yang maksimal.</h3>
+
+        <div class="mata-pelajaran-container">
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 346.8"><path fill="#ed1f34" d="M8.3 118.4h495.5v110.11H8.3z"/><path d="M8.3 303.1a35.4 35.4 0 0 0 35.4 35.4h424.6a35.4 35.4 0 0 0 35.4-35.4v-74.6H8.3z" fill="#ffe000"/><path d="M468.3 8.2H43.7A35.4 35.4 0 0 0 8.3 43.7v74.7h495.4V43.7a35.4 35.4 0 0 0-35.4-35.5z" fill="#333"/><path d="M468.3 0H43.7A43.7 43.7 0 0 0 0 43.7v259.4a43.7 43.7 0 0 0 43.7 43.7h424.6a43.7 43.7 0 0 0 43.7-43.7V43.7A43.7 43.7 0 0 0 468.3 0zM43.7 16.5h424.6a27.2 27.2 0 0 1 27.2 27.2v66.4h-479V43.7a27.2 27.2 0 0 1 27.2-27.2zm424.6 313.8H43.7a27.2 27.2 0 0 1-27.2-27.2v-66.4h388.1a8.3 8.3 0 0 0 0-16.5H16.5v-93.6h479v176.5a27.2 27.2 0 0 1-27.2 27.2z" fill="#121b21"/></svg>
+            <p>Deutsch</p>
+          </div>
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" id="mathe" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M462 166a10 10 0 1 0 10 10 10 10 0 0 0-10-10zM236 86a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/><path d="M462 46a50.1 50.1 0 0 0-50 50V399.9a10 10 0 0 0 .2 1.3v.2l.4 1.1 40 103a10 10 0 0 0 18.6 0l40-103 .4-1.1v-.2a10 10 0 0 0 .2-1.3v-.3V96A50.1 50.1 0 0 0 462 46zm0 428.4l-9.3-23.9a29.8 29.8 0 0 1 18.6 0zm16.5-42.6a50 50 0 0 0-33.1 0l-11.6-29.9a46.6 46.6 0 0 1 56.3 0zm13.5-52.2a66.7 66.7 0 0 0-60 0V122.5a79.9 79.9 0 0 1 60 0zm0-278.3a100.2 100.2 0 0 0-60 0V96a30 30 0 0 1 60 0z"/><path d="M462 206a10 10 0 0 0-10 10v123a10 10 0 0 0 20 0V216a10 10 0 0 0-10-10zM276 43H53a10 10 0 0 0-10 10v306a10 10 0 0 0 10 10h223a10 10 0 0 0 10-10V53a10 10 0 0 0-10-10zM116 349H63v-53h53zm0-73H63v-60h53zm0-80H63v-50h53zm80 153h-60v-53h60zm0-73h-60v-60h60zm0-80h-60v-50h60zm70 153h-50V216h50zm0-153h-50v-50h50zm0-70H63V63h203z"/><path d="M196 86H93a10 10 0 0 0 0 20h103a10 10 0 0 0 0-20z"/><path d="M382.9 166.8a10 10 0 0 0-10.8 1.9l-46.1 44V30a30 30 0 0 0-30-30H30A30 30 0 0 0 0 30v349a30 30 0 0 0 30 30h102.4l-83.6 86a10 10 0 0 0 7.2 17h323a10 10 0 0 0 10-10V176a10 10 0 0 0-6.1-9.2zM30 389a10 10 0 0 1-10-10V30a10 10 0 0 1 10-10h266a10 10 0 0 1 10 10v349a10 10 0 0 1-10 10zm276 18.3V429h-81l20-20h51a29.9 29.9 0 0 0 10-1.7zm63 84.7h-22.2v-13a10 10 0 0 0-20 0v13H306v-13a10 10 0 0 0-20 0v13h-20v-13a10 10 0 0 0-20 0v13h-20v-13a10 10 0 0 0-20 0v13h-20v-13a10 10 0 0 0-20 0v13h-20v-13a10 10 0 0 0-20 0v13H79.6l80.6-83h56.5l-22.9 22.9a10 10 0 0 0 7.1 17.1H316a10 10 0 0 0 10-10V240.3l43-41z"/></svg>
+            <p>Mathe</p>
+
+          </div>
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M222 223a10 10 0 1 0 10 10 10 10 0 0 0-10-10zM210 403a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/><path d="M505.2 183.5l-19.7-6.6a109.9 109.9 0 0 0-4.8-11.6l9.3-18.6a10 10 0 0 0-1.9-11.5l-28.3-28.3a10 10 0 0 0-7.8-2.9V60h30a30 30 0 0 0 0-60H30a30 30 0 0 0-10 58.3V333a90 90 0 0 0 162.7 53l99.8-127.1.8 1.8-9.3 18.6a10 10 0 0 0 1.9 11.5l28.3 28.3a10 10 0 0 0 11.5 1.9l18.6-9.3a110.1 110.1 0 0 0 11.6 4.8l6.1 18.2V403h-30a10 10 0 0 0-9.8 7.8l-20 89A10 10 0 0 0 302 512h120a10 10 0 0 0 9.8-12.2l-20-89a10 10 0 0 0-9.8-7.8h-30v-60h30a10 10 0 0 0 9.5-6.8l6.6-19.7a110.1 110.1 0 0 0 11.6-4.8l18.6 9.3a10 10 0 0 0 11.5-1.9l28.3-28.3a10 10 0 0 0 1.9-11.5l-9.3-18.6a109.9 109.9 0 0 0 4.8-11.6l19.7-6.6a10 10 0 0 0 6.8-9.5v-40a10 10 0 0 0-6.8-9.5zM20 30a10 10 0 0 1 10-10h452a10 10 0 0 1 0 20H30a10 10 0 0 1-10-10zm156.2 325.8l-.2.5a69 69 0 0 1-6.1 12.9c-1 1.6-2.1 3.2-3.2 4.8A70 70 0 1 1 110 263a70.1 70.1 0 0 1 66.2 92.8zm23.9-24.4A90 90 0 0 0 40 276.5V60h392v53.2l-2.4 1.2a110.1 110.1 0 0 0-11.6-4.8l-6.6-19.7A10 10 0 0 0 402 83h-40a10 10 0 0 0-9.5 6.8l-6.6 19.7a109.9 109.9 0 0 0-11.6 4.8l-18.6-9.3a10 10 0 0 0-11.5 1.9l-28.3 28.3a10 10 0 0 0-1.9 11.5l9.3 18.6a109.9 109.9 0 0 0-4.8 11.6l-19.7 6.6a10 10 0 0 0-6.8 9.5v40a10 10 0 0 0 6.8 9.5l8.8 2.9zm80.6-102.7l-8.7-2.9v-25.6l17.7-5.9a10 10 0 0 0 6.4-6.6 89.9 89.9 0 0 1 7.2-17.5 10 10 0 0 0 .2-9.3l-8.3-16.7 18.1-18.1 16.7 8.3a10 10 0 0 0 9.3-.2 89.9 89.9 0 0 1 17.5-7.2 10 10 0 0 0 6.6-6.4l5.9-17.7h25.6l5.9 17.7a10 10 0 0 0 6.6 6.4 89.9 89.9 0 0 1 17.5 7.2 10 10 0 0 0 7.2.9v28.8a69.9 69.9 0 0 0-106.5 7.6zM432 213a50 50 0 1 1-50-50 50.1 50.1 0 0 1 50 50zm-38 210l15.5 69h-95l15.5-69zm98-197.2l-17.7 5.9a10 10 0 0 0-6.4 6.6 89.9 89.9 0 0 1-7.2 17.5 10 10 0 0 0-.2 9.3l8.3 16.7-18.1 18.1-16.7-8.3a10 10 0 0 0-9.3.2 89.9 89.9 0 0 1-17.5 7.2 10 10 0 0 0-6.6 6.4l-5.8 17.6h-25.6l-5.9-17.7a10 10 0 0 0-6.6-6.4 89.9 89.9 0 0 1-17.5-7.2 10 10 0 0 0-9.3-.2l-16.7 8.3-18.1-18.1 8.3-16.7a10 10 0 0 0-.2-9.3 89.6 89.6 0 0 1-6.5-15.2l15.6-19.9A70 70 0 0 0 452 213v-85.6l16.8 16.8-8.3 16.7a10 10 0 0 0 .2 9.3 89.9 89.9 0 0 1 7.2 17.5 10 10 0 0 0 6.4 6.6l17.7 5.9z"/><path d="M187.5 425.1a10 10 0 0 0-13.9-2.4 109.8 109.8 0 0 1-141.3-12 10 10 0 0 0-14.1 14.1 129.8 129.8 0 0 0 167 14.1 10 10 0 0 0 2.3-13.8zM110 283a50 50 0 1 0 50 50 50.1 50.1 0 0 0-50-50zm0 80a30 30 0 1 1 30-30 30 30 0 0 1-30 30zM382 183a30 30 0 1 0 30 30 30 30 0 0 0-30-30zm0 40a10 10 0 1 1 10-10 10 10 0 0 1-10 10zM288 83.2a10 10 0 0 0-14.1-1.3 170.1 170.1 0 0 0-41.3 50.1 168.1 168.1 0 0 0-19.7 63.6 10 10 0 0 0 8.9 11h1a10 10 0 0 0 9.9-9 148.3 148.3 0 0 1 17.3-56.1 150.2 150.2 0 0 1 36.5-44.3 10 10 0 0 0 1.5-14z"/></svg>
+            <p>Mechanik</p>
+          </div>
+
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"><path d="M240 0C135.3 0 72.3 85.2 72 167.6a168.4 168.4 0 0 0 53.6 123.7c26.4 24.5 42.4 41.9 42.4 77V392a23.8 23.8 0 0 0 6.2 16 23.9 23.9 0 0 0 17.8 40h.8a40.1 40.1 0 0 0 39.2 32h16a40.1 40.1 0 0 0 39.2-32h.8a23.9 23.9 0 0 0 17.8-40 23.8 23.8 0 0 0 6.2-16v-23.7c0-35.5 15.8-52.6 41.8-76.5A168.4 168.4 0 0 0 408 168.3C408 70.8 337.3 0 240 0zm8 464h-16a24 24 0 0 1-22.6-16h61.3a24 24 0 0 1-22.7 16zm40-32h-96a8 8 0 0 1 0-16h96a8 8 0 0 1 0 16zm8-40a8 8 0 0 1-8 8h-96a8 8 0 0 1-8-8v-8h112zm47-111.9c-27.4 25.2-46.8 46.3-47 87.9h-16V176h49.5a24 24 0 1 0 0-16H272a8 8 0 0 0-8 8v200h-16V128a8 8 0 0 0-8-8h-49.5a24 24 0 1 0 0 16H232v232h-16V208a8 8 0 0 0-8-8h-49.5a24 24 0 1 0 0 16H200v152h-16c-.1-41.2-19.8-62.7-47.5-88.4A152.3 152.3 0 0 1 88 167.7c.3-72.4 54.1-147 144-151.3V80a8 8 0 0 0 8 8h41.5a24 24 0 1 0 0-16H248V16.4c85.2 3.7 144 65 144 152a152.3 152.3 0 0 1-49 111.7zm1-112.1a8 8 0 1 1 8 8 8 8 0 0 1-8-8zm-168-40a8 8 0 1 1-8-8 8 8 0 0 1 8 8zm-32 80a8 8 0 1 1-8-8 8 8 0 0 1 8 8zM296 80a8 8 0 1 1 8 8 8 8 0 0 1-8-8zM472 34a24 24 0 0 1-24-24 8 8 0 0 0-16 0 24 24 0 0 1-24 24 8 8 0 0 0 0 16 24 24 0 0 1 24 24 8 8 0 0 0 16 0 24 24 0 0 1 24-24 8 8 0 0 0 0-16zm-32 16a40.1 40.1 0 0 0-8-8 40.1 40.1 0 0 0 8-8 40.1 40.1 0 0 0 8 8 40.1 40.1 0 0 0-8 8zM104 378a40 40 0 0 1-40-40 8 8 0 0 0-16 0 40 40 0 0 1-40 40 8 8 0 0 0 0 16 40 40 0 0 1 40 40 8 8 0 0 0 16 0 40 40 0 0 1 40-40 8 8 0 0 0 0-16zm-48 27.2A56.5 56.5 0 0 0 36.8 386 56.5 56.5 0 0 0 56 366.8 56.5 56.5 0 0 0 75.2 386 56.5 56.5 0 0 0 56 405.2z"/></svg>
+            <p>Elektro</p>
+          </div>
+
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 470"><path d="M377.5 189.8V74.9A22.5 22.5 0 0 0 375 30H275a22.5 22.5 0 0 0-2.5 44.9v114.9a145.3 145.3 0 0 0-58.6 42 7.5 7.5 0 1 0 11.5 9.6 130.2 130.2 0 0 1 57.1-39.4 7.5 7.5 0 0 0 5-7.1V75H330a7.5 7.5 0 0 0 0-15h-55a7.5 7.5 0 0 1 0-15h100a7.5 7.5 0 0 1 0 15h-15a7.5 7.5 0 0 0 0 15h2.5v120a7.5 7.5 0 0 0 5 7.1 130 130 0 1 1-91.4 243.4 7.5 7.5 0 1 0-5.6 13.9A144.2 144.2 0 0 0 325 470c80 0 145-65 145-145a145.1 145.1 0 0 0-92.5-135.2z"/><circle cx="380.9" cy="351.4" r="7.5"/><circle cx="350.9" cy="381.4" r="7.5"/><path d="M282.7 415.6a7.51532 7.51532 0 0 0-6.4 13.6 115 115 0 0 0 148.3-161.7 7.5 7.5 0 0 0-7.5-3.7l-2.7.4-1 .2c-11.3 3.2-17.5 8.1-22.4 12.1s-9 7.3-19.4 7.3c-8.9 0-12.9-3.4-18.4-8.2s-13.7-11.8-28.2-11.8-22 6.5-28.2 11.8-9.5 8.2-18.4 8.2c-10.4 0-14-2.9-19.4-7.3s-11-8.9-22.4-12.1l-1-.2-2.7-.4a7.5 7.5 0 0 0-7.5 3.7l-.2.4A7.5 7.5 0 0 0 233 279h.1c8.1 2.4 12.2 5.7 16.6 9.2 6.5 5.2 13.2 10.6 28.8 10.6s22-6.5 28.2-11.8 9.5-8.2 18.4-8.2 12.9 3.4 18.4 8.2 13.7 11.8 28.2 11.8 22.3-5.4 28.8-10.6c3.9-3.1 7.5-6 13.9-8.3a100 100 0 0 1-131.7 135.7z"/><path d="M181 193.8V44.9A22.5 22.5 0 0 0 178.5 0h-100A22.5 22.5 0 0 0 76 44.9v120.2a7.5 7.5 0 0 0 15 0V45h42.5a7.5 7.5 0 0 0 0-15h-55a7.5 7.5 0 0 1 0-15h100a7.5 7.5 0 1 1 0 15h-15a7.5 7.5 0 0 0 0 15h2.5v150a7.5 7.5 0 0 0 .4 2.5l72.9 210.8c4.4 12.7 3.4 24.5-2.8 33.2S219.5 455 206 455H51c-13.5 0-24.3-4.8-30.5-13.5s-7.2-20.5-2.8-33.2l72.9-210.8a7.51083 7.51083 0 0 0-14.2-4.9L3.6 403.4c-6 17.4-4.3 34.1 4.8 46.9S32.6 470 51 470h155c18.5 0 33.6-7 42.7-19.8s10.8-29.4 4.8-46.9L181 193.8z"/><path d="M64.7 348.8a7.5 7.5 0 0 0-11.7 3.5l-21.1 60.9c-2.8 8-2.5 15 .8 19.6S42.5 440 51 440h155c8.5 0 15-2.6 18.3-7.2s3.6-11.6.8-19.6L204 352.3a7.5 7.5 0 0 0-11.7-3.5c-4.1 3.2-8 5.6-17.3 5.6s-12.9-3.4-18.4-8.2-13.7-11.8-28.2-11.8-22 6.5-28.2 11.8-9.5 8.2-18.4 8.2-13.2-2.4-17.3-5.6zm45.5 8.8c5.5-4.8 9.5-8.2 18.4-8.2s12.9 3.4 18.4 8.2 13.7 11.8 28.2 11.8c7.8 0 13.5-1.4 17.9-3.4l18 52.1a14.4 14.4 0 0 1 1 6 14.4 14.4 0 0 1-6 1H51a14.4 14.4 0 0 1-6-1 14.4 14.4 0 0 1 1-6L64 366c4.4 2 10 3.4 17.9 3.4 14.4 0 22-6.6 28.2-11.8z"/></svg>
+            <p>Chemie</p>
+          </div>
+
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 418.9"><path d="M398.6 140.5c-8.9-3.4-18.3-6.5-28.2-9.3 2.6-10 4.6-19.7 6.1-29.1 7.7-48.8-.8-83-23.9-96.3a45.3 45.3 0 0 0-23-5.8c-26.9 0-60.9 20-95.1 53.7-7.5-7.4-15-14.1-22.5-20.2-38.4-31-72.2-40.8-95.4-27.4-14.9 8.6-23.9 26.1-26.1 50.7a7.5 7.5 0 1 0 14.9 1.4c1.2-13.6 5.5-31.4 18.7-39 17.1-9.9 45.7-.4 78.4 26.1 7.1 5.8 14.3 12.2 21.5 19.2a485.8 485.8 0 0 0-42.4 52.3 482.5 482.5 0 0 0-68.3 10.9 272.4 272.4 0 0 1-7.5-40.8 7.5 7.5 0 1 0-14.9 1.5 286.9 286.9 0 0 0 7.9 43.1c-9.6 2.7-18.7 5.7-27.3 9C25.4 158.2 0 182.7 0 209.4s25.4 51.1 71.4 68.9c8.8 3.4 18.3 6.5 28.2 9.3-2.6 10-4.6 19.7-6.1 29.1-7.7 48.8.8 83 23.9 96.3a45.3 45.3 0 0 0 23 5.8c26.6 0 60.1-19.5 93.9-52.5 7.3 7.1 14.5 13.6 21.8 19.5 27.2 22 52.1 33.3 72.5 33.3a45.1 45.1 0 0 0 22.9-5.8c23.1-13.3 31.6-47.5 23.9-96.3-1.5-9.4-3.5-19.1-6.1-29.1a288.2 288.2 0 0 0 42.2-15 7.51881 7.51881 0 0 0-6.2-13.7 273.7 273.7 0 0 1-40 14.2 482.7 482.7 0 0 0-24-62.8 484.8 484.8 0 0 0 24.9-64.9c55.8 15.5 88.8 40.1 88.8 63.7 0 15.2-13.3 27.8-24.5 35.7a7.50417 7.50417 0 1 0 8.6 12.3c20.2-14.2 30.8-30.8 30.8-48 0-26.7-25.4-51.2-71.4-68.9zM329.6 15a30.5 30.5 0 0 1 15.4 3.9c17.1 9.9 23.2 39.4 16.6 81-1.4 8.9-3.4 18.2-5.8 27.7a485 485 0 0 0-68.5-10.8 483.7 483.7 0 0 0-42.4-52.3l8-7.6c29.3-27 56.5-41.8 76.7-41.8zm-95.1 60.2a455 455 0 0 1 33.3 40.1q-16.2-.9-32.8-.9c-11.4 0-22.7.3-33.9.9a464 464 0 0 1 33.3-40.1zm-.1 269.7a454.1 454.1 0 0 1-34.5-41.5c11.5.7 23.2 1 35.1 1s22.7-.3 33.9-1a461.4 461.4 0 0 1-34.5 41.4zm.6-55.4c-16.1 0-31.6-.6-46.3-1.8-8.3-12.1-16.3-24.8-23.9-38s-14.4-26.2-20.7-39.2c6.5-13.7 13.7-27.4 21.6-41.1s15.8-26.1 24.2-38.3c14.4-1.1 29.4-1.7 45.1-1.7s30 .6 44 1.6c8.4 12.3 16.6 25.2 24.3 38.6s15 27.3 21.5 40.9c-6.2 12.9-13.1 26-20.6 38.9s-15.7 26-24.1 38.2c-14.7 1.2-29.8 1.8-45.2 1.8zm-65.6-3.7a448.3 448.3 0 0 1-51.2-8.8 453.2 453.2 0 0 1 17.9-48.8q7.3 14.5 15.7 29t17.6 28.5zm1.2-152.8q-9.2 14-17.8 29t-16.7 30.9a460 460 0 0 1-18.8-50.7 448.4 448.4 0 0 1 53.3-9.2zM15 209.4c0-23.5 32.6-48 87.8-63.6a489.5 489.5 0 0 0 24.8 64.7 482.4 482.4 0 0 0-23.9 62.7C48 257.6 15 233 15 209.4zm125.5 194.4A30.5 30.5 0 0 1 125 400c-17.1-9.9-23.2-39.4-16.6-81 1.4-8.9 3.3-18.2 5.8-27.7a482.4 482.4 0 0 0 66.2 10.6 483.4 483.4 0 0 0 43.5 53.6l-6.8 6.4c-29.3 27-56.5 41.8-76.7 41.8zm220.2-84.6c6.6 41.6.5 71.1-16.6 81s-45.7.4-78.4-26.1c-6.9-5.6-13.8-11.8-20.7-18.5a483.7 483.7 0 0 0 43.6-53.6 489.8 489.8 0 0 0 66.3-10.5c2.4 9.5 4.4 18.8 5.8 27.7zm-9.8-42.2a460.4 460.4 0 0 1-51.3 8.7q9.1-13.9 17.8-28.9T333 228a453.2 453.2 0 0 1 18 48.9zM333 192.9q-7.7-15.4-16.6-30.7t-18.1-29.3a450.9 450.9 0 0 1 53.6 9.1 455.7 455.7 0 0 1-19 50.9z"/><path d="M235 171.9a37.5 37.5 0 1 0 37.5 37.5 37.5 37.5 0 0 0-37.5-37.5zm0 60a22.5 22.5 0 1 1 22.5-22.5 22.5 22.5 0 0 1-22.5 22.5z"/></svg>
+            <p>Physik Med.</p>
+          </div>
+
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 339.9 470"><path d="M339.8 461.9c-.1-56-16.7-104.5-50.8-148.3-29.4-37.8-68-67.6-105.4-96.4-71.3-55-138.7-107-138.7-209.7A7.5 7.5 0 0 0 37.5 0h-30A7.5 7.5 0 0 0 0 7.5c0 56.2 16.6 104.9 50.8 148.9 23.4 30.1 52.7 55.1 82.5 78.6-27.9 22-58.4 47.7-82.5 78.6C16.6 357.6 0 406.3 0 462.5a7.5 7.5 0 0 0 7.5 7.5h30a7.5 7.5 0 0 0 7.5-7.5 221.7 221.7 0 0 1 1.1-22.5h53.3a7.5 7.5 0 0 0 0-15H48.2a180.4 180.4 0 0 1 14.1-44.5H248a7.5 7.5 0 0 0 0-15H70.1c9.3-15.9 20.8-30.6 34-44.5h91.6a7.5 7.5 0 0 0 0-15h-76.5c15.3-14.4 32.5-28.3 50.7-42.5 66 51.3 124.9 103 124.9 199.1a7.5 7.5 0 0 0 7.5 7.5h30a7.5 7.5 0 0 0 7.5-7.5v-.6zM95.6 307.8l-.9.9a282.1 282.1 0 0 0-23.1 26.9A216 216 0 0 0 51 368.9a7.5 7.5 0 0 0-.7 1.5A199.5 199.5 0 0 0 32.1 431a7.6 7.6 0 0 0-.1.9 226.5 226.5 0 0 0-1.9 23.1h-15c1.4-49.6 17-92.9 47.5-132.2 23.8-30.7 54.9-56.4 82.8-78.3l10.7 8.3 1.5 1.2c-22.1 17.3-43.4 34.7-62 53.9zM309.7 455c-1.4-46.4-16.2-87-45-123.8-26.9-34.3-62.1-61.5-99.4-90.3s-74.5-57.5-102.7-93.8C32.1 107.9 16.5 64.6 15.1 15h15c1.4 46.4 16.2 87 45 123.8 26.9 34.3 62.1 61.5 99.4 90.3s74.5 57.5 102.7 93.8c30.5 39.3 46.1 82.6 47.5 132.2z"/><path d="M91.8 89.5a7.5 7.5 0 0 0 0 15h30a7.5 7.5 0 0 0 0-15z"/><path d="M69.8 45h221.9a178.9 178.9 0 0 1-13.9 44.5h-126a7.5 7.5 0 0 0 0 15H270c-9.1 15.7-20.6 30.3-34 44.5h-91.8a7.5 7.5 0 0 0 0 15h76.6c-9.7 9-20.1 18-31.3 27a7.50417 7.50417 0 1 0 9.4 11.7c33.4-27 68.2-58.3 89.7-101.5a7.5 7.5 0 0 0 .9-1.8 200 200 0 0 0 18.2-60.2 7.5 7.5 0 0 0 .2-1.2 226 226 0 0 0 1.8-23h15c-1.4 49.6-17 92.9-47.5 132.2-15.6 20.1-35.8 40-63.4 62.8a7.5 7.5 0 0 0 9.5 11.6c28.5-23.5 49.4-44.2 65.7-65.2 34.2-44 50.8-92.7 50.8-148.9a7.5 7.5 0 0 0-7.5-7.5h-30a7.5 7.5 0 0 0-7.5 7.5q0 11.7-1.1 22.5H69.8a7.5 7.5 0 1 0 0 15zM270 425H129.4a7.5 7.5 0 0 0 0 15H270a7.5 7.5 0 0 0 0-15z"/></svg>
+            <p>Biologie</p>
+          </div>
+
+          <div class="pelajaran-div">
+            <p></p>
+            <svg class="pelajaran-simbol" id="wirtschaft" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M230 292a10 10 0 1 0 10 10 10 10 0 0 0-10-10zM110 292a10 10 0 1 0 10 10 10 10 0 0 0-10-10zM170 292a10 10 0 0 1 0-20c3.5 0 7.3 1.8 10.8 5.2a10.00712 10.00712 0 0 0 13.9-14.4 38.6 38.6 0 0 0-14.7-9.2V242a10 10 0 0 0-20 0v11.7a30 30 0 0 0 10 58.3 10 10 0 0 1 0 20c-4.3 0-8.9-2.7-13-7.6a10.00625 10.00625 0 0 0-15.3 12.9 41.5 41.5 0 0 0 18.3 13V362a10 10 0 0 0 20 0v-11.7a30 30 0 0 0-10-58.3z"/><path d="M439 232c-35.9 0-73 15-73 40v52.3a90.8 90.8 0 0 0-26-9.5V302a182.8 182.8 0 0 0-26.3-93.8c-17.2-28.7-41-51.1-68.7-64.8a8.5 8.5 0 0 1-5-7.4v-14a50.1 50.1 0 0 0 40-49 10 10 0 0 0-20 0 30 30 0 0 1-22.1 28.9 30.2 30.2 0 0 0-12.4-14.6l33-51.9a10 10 0 0 0-4-14.3l-40-20a10 10 0 0 0-8.9 0L170 18.8 134.5 1.1a10 10 0 0 0-8.9 0l-40 20a10 10 0 0 0-4 14.3l33 51.9a30.2 30.2 0 0 0-12.4 14.6A30 30 0 0 1 80 73a10 10 0 0 0-20 0 50.1 50.1 0 0 0 40 49v14a8.5 8.5 0 0 1-5 7.4c-27.8 13.7-51.5 36.1-68.7 64.8A182.8 182.8 0 0 0 0 302v140a70.1 70.1 0 0 0 70 70h228a10 10 0 0 0 3.2-.5c3.9.3 7.8.5 11.8.5 24.5 0 49.6-7 63-19.4 13.4 12.4 38.5 19.4 63 19.4 35.9 0 73-15 73-40V272c0-25-37.1-40-73-40zM104.4 34L130 21.2 165.5 39a10 10 0 0 0 8.9 0L210 21.2 235.6 34l-31.1 49h-69zM220 113v13H120v-13a10 10 0 0 1 10-10h80a10 10 0 0 1 10 10zM70 492a50.1 50.1 0 0 1-50-50V302c0-59.4 33.7-115.9 83.8-140.6a28.9 28.9 0 0 0 14.3-15.4h103.8a29 29 0 0 0 14.3 15.4C285.5 185.7 320 243.5 320 302v10.2l-7-.2a126.9 126.9 0 0 0-34 4.5A110 110 0 1 0 170 412a109 109 0 0 0 70-25.1V472c0 7.8 3.5 14.4 9.3 20zm170-140v6.6a89.8 89.8 0 1 1 16.7-32.3c-10.8 7-16.7 16-16.7 25.7zm126 120c0 7.9-22.8 20-53 20a111 111 0 0 1-13.7-.8C275 488.2 260 478 260 472v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm-53-20c-30.2 0-53-12.1-53-20 0-3.1 4.1-7.3 10.5-10.7 10.7-5.8 26.6-9.2 42.5-9.2a112.7 112.7 0 0 1 15.3 1c24.3 3.4 37.7 13.3 37.7 19 0 7.8-22.8 19.9-53 19.9zm179 100c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm0-40c0 7.9-22.8 20-53 20s-53-12.1-53-20v-12.2c14 7.9 33.7 12.2 53 12.2s39-4.3 53-12.2zm-53-20c-30.2 0-53-12.1-53-20s22.8-20 53-20 53 12.1 53 20-22.8 20-53 20z"/></svg>
+            <p>Wirtschaft</p>
+          </div>
+
+        </div>
+        <br />
+        <p>Persiapkan FSP sematang mungkin!</p>
+        <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScHgV0p-evQhN6ugR4fdkhBpc3BEjflAo6s2XvuUYdfZvFTKg/viewform" role="button" style="margin-bottom: 15px;">Daftar</a>
+        <br />
+        <p>Ada pertanyaan lebih lanjut? Silakan kirim pesan <a href="mailto:iwkztutorium@gmail.com">di sini</a>!</p>
+          <br />
+      </div>
+    </div>
+
+    <div id="section-sprechstunde" class="row flex-row-reverse row-low">
+
+      <div class="col-md-5 right-3">
+        <div class="col-text-1-right">
+          <h1 class="big-h1-menu">03<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">Sprechstunde</h1>
+          <h5>Sprechstunde Kuliah</h5>
+        </div>
+      </div>
+
+      <div class="col-md-7">
+          <h3 class="text">IWKZ tutorium juga merupakan sebuah plattform yang mempertemukan orang
+yang membutuhkan bantuan dan yang ingin membantu dalam menyelesaikan
+berbagai kesulitan belajar di perkuliahan. Disini kami akan menyusun dan selalu
+update daftar pelajaran apa sajakah yang tersedia. Teknis nya cukup hubungi
+kontak yang kami sediakan untuk pelajaran yang diminati, buat Termin dengan
+orang yang bersangkutan, ketemuan dan belajar.</h3>
+          <br />
+          <p>Untuk melihat daftar pelajarannya klik tombol di bawah!</p>
+          <a class="btn btn-primary" href="https://docs.google.com/presentation/d/1Va6NqwYj5LWg5_f0tjsadL-o2Lh8CGMSJ6h4sS-PGws/edit?usp=sharing" role="button" style="margin-bottom: 15px;">Daftar Pelajaran</a>
+          <br />
+          <p>Jika teman teman ingin request pelajaran atau ingin menawarkan bantuan, silahkan kirim pesan
+<a href="mailto:iwkztutorium@gmail.com">di sini</a>.</p>
+      </div>
+    </div>
+
+<!-- Button trigger youtube modal -->
+    <div id="section-youtube" class="row youtube-div">
+      <div class="col-md-12">
+        <h1 class="h1-youtube">Kami juga membuat video tutorial di youtube.</h1>
+        <div class="play-container">
+          <a video-url="https://www.youtube.com/watch?v=9K38LEzAAQc" id="video"><svg class="youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="section-studienberatung" class="row row-low">
+      <div class="col-md-5 left-4">
+        <div class="col-text-1">
+          <h1 class="big-h1-menu">04<span class="span">/06</span></h1>
+          <h1 class="med-h1-menu">Studienberatung</h1>
+          <h5>Konsultasi Kuliah</h5>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <h3 class="text">Dunia perkuliahan itu penuh dengan pertanyaan, baik masalah teknis maupun
+masalah akademis. Teman-teman dari berbagai kampus di Berlin dan sekitarnya
+berikut ini akan senang membantu menjawab berbagai pertanyaan umum
+maupun khusus. Jangan sungkan sungkan, silahkan hubungi melalui kontak yang
+telah kami sediakan.</h3>
+        <br />
+        <p>Untuk melihat daftar Berater nya klik tombol di bawah!</p>
+        <a class="btn btn-primary" href="https://docs.google.com/presentation/d/1I22JjHLpEh0INU1CbpT-YsRdnwOILYYgTesYCqMFtas/edit?usp=sharing" role="button" style="margin-bottom: 15px;">Berater</a>
+        <br />
+        <p>Ada pertanyaan lebih lanjut? Silakan kirim pesan <a href="mailto:iwkztutorium@gmail.com">di sini</a>!</p>
+      </div>
+    </div>
+
+    <!-- WHOLE PAGE -->
+    <div class="row footer">
+      <div class="col">
+        <a style="text-decoration: none; color: #fff;" href="mailto:iwkztutorium@gmail.com"><h1 class="h1-footer">iwkztutorium@gmail.com</h1></a>
+        <br />
+        <div class="social-icons">
+          <a href="https://www.facebook.com/iwkztutorium/"><svg class="facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"><path d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229"/></svg></a>
+          <a href="https://www.instagram.com/iwkzalfalah/"><svg class="instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UC-Ek7xTBr9P9of0WpKCSB2w"><svg class="youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a>
+
+        </div>
+
+        <br />
+        <div class="line"></div>
+        <p id="copyright">© 2018 made by</i> <a href="http://fauzias.me/">a human who love neko</a> with <i class="fas fa-heart" style="color:red"></i></p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+    <!-- <svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 737.8 429.4">
+      <path d="M825.8,686.6,168.1,648a40,40,0,0,1-34.2-47.8l50-241.7a40,40,0,0,1,34-31.6l534.2-69.1A40,40,0,0,1,797,293.2l73.6,349.4A40,40,0,0,1,825.8,686.6Z" transform="translate(-133 -257.5)"/>
+    </svg> -->
+
+
+  <!-- NAV HERE -->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/video.popup.js"></script>
+  <script type="text/javascript" src="js/typed.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

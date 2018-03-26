@@ -1,0 +1,124 @@
+/*
+    GitHub URL: https://github.com/gucastiliao/video-popup-js
+*/
+
+.videopopupjs{
+    background-color:#000;
+    background-color:rgba(0,0,0,0.8);
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:99999;
+    text-align: start!important;
+}
+.videopopupjs--hide{
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: videoPopupJsHide;
+    animation-name: videoPopupJsHide;
+}
+.videopopupjs__close{
+    width:40px;
+    height:40px;
+    cursor:pointer;
+    display:block;
+    margin-bottom:10px;
+    margin-left: auto;
+    color:rgba(255, 255, 255, 0);
+}
+.videopopupjs__close:after{
+    width:30px;
+    height:30px;
+    display:block;
+    text-align:center;
+    content:'';
+    border-radius:50%;
+    background: url(data:image/svg+xml;base64,PHN2ZyBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDM4NC4xIDM4NC4xIj48cGF0aCBkPSJNMzIzLjEgMzc3LjFsNTMuOS01My45YTIzLjkgMjMuOSAwIDAgMCAwLTMzLjlsLTk3LjItOTcuMkwzNzcgOTQuOWEyMy45IDIzLjkgMCAwIDAgMC0zMy45TDMyMy4xIDcuMWEyMy45IDIzLjkgMCAwIDAtMzMuOSAwTDE5MiAxMDQuMyA5NC44IDcuMWEyMy45IDIzLjkgMCAwIDAtMzMuOSAwTDcgNjFhMjMuOSAyMy45IDAgMCAwIDAgMzMuOWw5Ny4yIDk3LjJMNyAyODkuM2EyMy45IDIzLjkgMCAwIDAgMCAzMy45bDUzLjkgNTMuOWEyMy45IDIzLjkgMCAwIDAgMzMuOSAwbDk3LjItOTcuMiA5Ny4yIDk3LjJhMjQuMSAyNC4xIDAgMCAwIDMzLjkgMHoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=) no-repeat;
+    line-height:2.2;
+    font-size:13px;
+}
+.videopopupjs__close:hover{
+    opacity:0.5;
+}
+.videopopupjs--animation{
+    opacity: 0;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: videoPopupJs;
+    animation-name: videoPopupJs;
+}
+.videopopupjs__content{
+    margin:0 auto;
+    height:100%;
+    height:500px;
+    width:100%;
+    margin-top:5%;
+}
+.videopopupjs__content iframe{
+    width:100%;
+    height:100%;
+}
+.videopopupjs__block--notfound{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width:100%;
+    height:500px;
+    background-color:#fff;
+    text-align:center;
+    vertical-align: middle;
+    line-height: 500px;
+    font-family:'Arial';
+    font-size:20px;
+}
+@media(max-width: 768px){
+    .videopopupjs__content{
+        max-width:90%!important;
+    }
+}
+@-webkit-keyframes videoPopupJs{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes videoPopupJs{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes videoPopupJsHide{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes videoPopupJsHide{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
